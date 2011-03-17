@@ -15,8 +15,23 @@
 
 @synthesize tabBarController=_tabBarController;
 
+#pragma mark Repository
+-(id) expertises{
+    return expertises;
+}
+
+#pragma mark --
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    expertises = [[NSMutableArray alloc]initWithObjects:
+                  [[TTExpertise alloc] initWithName: @"Tuba" andId:1],
+                  [[TTExpertise alloc] initWithName: @"Drawing" andId:2],
+                  [[TTExpertise alloc] initWithName: @"Katas" andId:3],
+                  [[TTExpertise alloc] initWithName: @"Pro Dev Time" andId:4],
+                  nil];
+    
     // Override point for customization after application launch.
     // Add the tab bar controller's current view as a subview of the window
     self.window.rootViewController = self.tabBarController;

@@ -14,16 +14,22 @@
 		A8E1A0A21332208600CFBC36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E1A0A11332208600CFBC36 /* main.m */; };
 		A8E1A0A51332208600CFBC36 /* TenThousand_IPhoneAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E1A0A41332208600CFBC36 /* TenThousand_IPhoneAppDelegate.m */; };
 		A8E1A0A81332208600CFBC36 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8E1A0A61332208600CFBC36 /* MainWindow.xib */; };
-		A8E1A0AB1332208600CFBC36 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E1A0AA1332208600CFBC36 /* FirstViewController.m */; };
-		A8E1A0AE1332208600CFBC36 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E1A0AD1332208600CFBC36 /* SecondViewController.m */; };
-		A8E1A0B11332208600CFBC36 /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8E1A0AF1332208600CFBC36 /* FirstView.xib */; };
-		A8E1A0B41332208600CFBC36 /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8E1A0B21332208600CFBC36 /* SecondView.xib */; };
 		A8E1A0BB1332208600CFBC36 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8E1A0941332208600CFBC36 /* UIKit.framework */; };
 		A8E1A0BC1332208600CFBC36 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8E1A0961332208600CFBC36 /* Foundation.framework */; };
 		A8E1A0BD1332208600CFBC36 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8E1A0981332208600CFBC36 /* CoreGraphics.framework */; };
 		A8E1A0C51332208600CFBC36 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A8E1A0C31332208600CFBC36 /* InfoPlist.strings */; };
 		A8E1A0C81332208600CFBC36 /* TenThousand_IPhoneTests.h in Resources */ = {isa = PBXBuildFile; fileRef = A8E1A0C71332208600CFBC36 /* TenThousand_IPhoneTests.h */; };
 		A8E1A0CA1332208600CFBC36 /* TenThousand_IPhoneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E1A0C91332208600CFBC36 /* TenThousand_IPhoneTests.m */; };
+		A8E1A0D91332250000CFBC36 /* PracticeLogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E1A0D71332250000CFBC36 /* PracticeLogViewController.m */; };
+		A8E1A0DA1332250000CFBC36 /* PracticeLogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8E1A0D81332250000CFBC36 /* PracticeLogViewController.xib */; };
+		A8E1A0DF133226E800CFBC36 /* ExpertiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E1A0DD133226E800CFBC36 /* ExpertiseViewController.m */; };
+		A8E1A0E0133226E800CFBC36 /* ExpertiseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8E1A0DE133226E800CFBC36 /* ExpertiseViewController.xib */; };
+		A8E1A0EB1332283300CFBC36 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E1A0E91332283300CFBC36 /* CalendarViewController.m */; };
+		A8E1A0EC1332283300CFBC36 /* CalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8E1A0EA1332283300CFBC36 /* CalendarViewController.xib */; };
+		A8E1A0F01332287200CFBC36 /* ChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E1A0EE1332287200CFBC36 /* ChartViewController.m */; };
+		A8E1A0F11332287200CFBC36 /* ChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8E1A0EF1332287200CFBC36 /* ChartViewController.xib */; };
+		A8E1A0F51332294400CFBC36 /* TTPracticeLog.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E1A0F41332294400CFBC36 /* TTPracticeLog.m */; };
+		A8E1A0F81332296A00CFBC36 /* TTExpertise.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E1A0F71332296A00CFBC36 /* TTExpertise.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,25 +47,35 @@
 		A8E1A0941332208600CFBC36 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A8E1A0961332208600CFBC36 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A8E1A0981332208600CFBC36 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		A8E1A09C1332208600CFBC36 /* TenThousand_IPhone-Info.plist */ = {isa = PBXFileReference; path = "TenThousand_IPhone-Info.plist"; sourceTree = "<group>"; };
+		A8E1A09C1332208600CFBC36 /* TenThousand_IPhone-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TenThousand_IPhone-Info.plist"; sourceTree = "<group>"; };
 		A8E1A09E1332208600CFBC36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A8E1A0A01332208600CFBC36 /* TenThousand_IPhone-Prefix.pch */ = {isa = PBXFileReference; path = "TenThousand_IPhone-Prefix.pch"; sourceTree = "<group>"; };
+		A8E1A0A01332208600CFBC36 /* TenThousand_IPhone-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TenThousand_IPhone-Prefix.pch"; sourceTree = "<group>"; };
 		A8E1A0A11332208600CFBC36 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A8E1A0A31332208600CFBC36 /* TenThousand_IPhoneAppDelegate.h */ = {isa = PBXFileReference; path = TenThousand_IPhoneAppDelegate.h; sourceTree = "<group>"; };
+		A8E1A0A31332208600CFBC36 /* TenThousand_IPhoneAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TenThousand_IPhoneAppDelegate.h; sourceTree = "<group>"; };
 		A8E1A0A41332208600CFBC36 /* TenThousand_IPhoneAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TenThousand_IPhoneAppDelegate.m; sourceTree = "<group>"; };
 		A8E1A0A71332208600CFBC36 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		A8E1A0A91332208600CFBC36 /* FirstViewController.h */ = {isa = PBXFileReference; path = FirstViewController.h; sourceTree = "<group>"; };
-		A8E1A0AA1332208600CFBC36 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		A8E1A0AC1332208600CFBC36 /* SecondViewController.h */ = {isa = PBXFileReference; path = SecondViewController.h; sourceTree = "<group>"; };
-		A8E1A0AD1332208600CFBC36 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		A8E1A0B01332208600CFBC36 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstView.xib; sourceTree = "<group>"; };
-		A8E1A0B31332208600CFBC36 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondView.xib; sourceTree = "<group>"; };
 		A8E1A0BA1332208600CFBC36 /* TenThousand_IPhoneTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TenThousand_IPhoneTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A8E1A0C21332208600CFBC36 /* TenThousand_IPhoneTests-Info.plist */ = {isa = PBXFileReference; path = "TenThousand_IPhoneTests-Info.plist"; sourceTree = "<group>"; };
+		A8E1A0C21332208600CFBC36 /* TenThousand_IPhoneTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TenThousand_IPhoneTests-Info.plist"; sourceTree = "<group>"; };
 		A8E1A0C41332208600CFBC36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A8E1A0C61332208600CFBC36 /* TenThousand_IPhoneTests-Prefix.pch */ = {isa = PBXFileReference; path = "TenThousand_IPhoneTests-Prefix.pch"; sourceTree = "<group>"; };
+		A8E1A0C61332208600CFBC36 /* TenThousand_IPhoneTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TenThousand_IPhoneTests-Prefix.pch"; sourceTree = "<group>"; };
 		A8E1A0C71332208600CFBC36 /* TenThousand_IPhoneTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TenThousand_IPhoneTests.h; sourceTree = "<group>"; };
 		A8E1A0C91332208600CFBC36 /* TenThousand_IPhoneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TenThousand_IPhoneTests.m; sourceTree = "<group>"; };
+		A8E1A0D61332250000CFBC36 /* PracticeLogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PracticeLogViewController.h; sourceTree = "<group>"; };
+		A8E1A0D71332250000CFBC36 /* PracticeLogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PracticeLogViewController.m; sourceTree = "<group>"; };
+		A8E1A0D81332250000CFBC36 /* PracticeLogViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PracticeLogViewController.xib; sourceTree = "<group>"; };
+		A8E1A0DC133226E800CFBC36 /* ExpertiseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpertiseViewController.h; sourceTree = "<group>"; };
+		A8E1A0DD133226E800CFBC36 /* ExpertiseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpertiseViewController.m; sourceTree = "<group>"; };
+		A8E1A0DE133226E800CFBC36 /* ExpertiseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpertiseViewController.xib; sourceTree = "<group>"; };
+		A8E1A0E81332283300CFBC36 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
+		A8E1A0E91332283300CFBC36 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
+		A8E1A0EA1332283300CFBC36 /* CalendarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalendarViewController.xib; sourceTree = "<group>"; };
+		A8E1A0ED1332287200CFBC36 /* ChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartViewController.h; sourceTree = "<group>"; };
+		A8E1A0EE1332287200CFBC36 /* ChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartViewController.m; sourceTree = "<group>"; };
+		A8E1A0EF1332287200CFBC36 /* ChartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChartViewController.xib; sourceTree = "<group>"; };
+		A8E1A0F31332294400CFBC36 /* TTPracticeLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTPracticeLog.h; sourceTree = "<group>"; };
+		A8E1A0F41332294400CFBC36 /* TTPracticeLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTPracticeLog.m; sourceTree = "<group>"; };
+		A8E1A0F61332296A00CFBC36 /* TTExpertise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTExpertise.h; sourceTree = "<group>"; };
+		A8E1A0F71332296A00CFBC36 /* TTExpertise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTExpertise.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,15 +134,14 @@
 		A8E1A09A1332208600CFBC36 /* TenThousand_IPhone */ = {
 			isa = PBXGroup;
 			children = (
+				A8E1A0F21332291E00CFBC36 /* Models */,
+				A8E1A0E71332280B00CFBC36 /* CalendarView */,
+				A8E1A0E1133227BC00CFBC36 /* ChartsView */,
+				A8E1A0DB133226B600CFBC36 /* ExpertiseView */,
+				A8E1A0D31332243700CFBC36 /* PracticeView */,
 				A8E1A0A31332208600CFBC36 /* TenThousand_IPhoneAppDelegate.h */,
 				A8E1A0A41332208600CFBC36 /* TenThousand_IPhoneAppDelegate.m */,
 				A8E1A0A61332208600CFBC36 /* MainWindow.xib */,
-				A8E1A0A91332208600CFBC36 /* FirstViewController.h */,
-				A8E1A0AA1332208600CFBC36 /* FirstViewController.m */,
-				A8E1A0AC1332208600CFBC36 /* SecondViewController.h */,
-				A8E1A0AD1332208600CFBC36 /* SecondViewController.m */,
-				A8E1A0AF1332208600CFBC36 /* FirstView.xib */,
-				A8E1A0B21332208600CFBC36 /* SecondView.xib */,
 				A8E1A09B1332208600CFBC36 /* Supporting Files */,
 			);
 			path = TenThousand_IPhone;
@@ -161,6 +176,57 @@
 				A8E1A0C61332208600CFBC36 /* TenThousand_IPhoneTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A8E1A0D31332243700CFBC36 /* PracticeView */ = {
+			isa = PBXGroup;
+			children = (
+				A8E1A0D61332250000CFBC36 /* PracticeLogViewController.h */,
+				A8E1A0D71332250000CFBC36 /* PracticeLogViewController.m */,
+				A8E1A0D81332250000CFBC36 /* PracticeLogViewController.xib */,
+			);
+			name = PracticeView;
+			sourceTree = "<group>";
+		};
+		A8E1A0DB133226B600CFBC36 /* ExpertiseView */ = {
+			isa = PBXGroup;
+			children = (
+				A8E1A0DC133226E800CFBC36 /* ExpertiseViewController.h */,
+				A8E1A0DD133226E800CFBC36 /* ExpertiseViewController.m */,
+				A8E1A0DE133226E800CFBC36 /* ExpertiseViewController.xib */,
+			);
+			name = ExpertiseView;
+			sourceTree = "<group>";
+		};
+		A8E1A0E1133227BC00CFBC36 /* ChartsView */ = {
+			isa = PBXGroup;
+			children = (
+				A8E1A0ED1332287200CFBC36 /* ChartViewController.h */,
+				A8E1A0EE1332287200CFBC36 /* ChartViewController.m */,
+				A8E1A0EF1332287200CFBC36 /* ChartViewController.xib */,
+			);
+			name = ChartsView;
+			sourceTree = "<group>";
+		};
+		A8E1A0E71332280B00CFBC36 /* CalendarView */ = {
+			isa = PBXGroup;
+			children = (
+				A8E1A0E81332283300CFBC36 /* CalendarViewController.h */,
+				A8E1A0E91332283300CFBC36 /* CalendarViewController.m */,
+				A8E1A0EA1332283300CFBC36 /* CalendarViewController.xib */,
+			);
+			name = CalendarView;
+			sourceTree = "<group>";
+		};
+		A8E1A0F21332291E00CFBC36 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A8E1A0F31332294400CFBC36 /* TTPracticeLog.h */,
+				A8E1A0F41332294400CFBC36 /* TTPracticeLog.m */,
+				A8E1A0F61332296A00CFBC36 /* TTExpertise.h */,
+				A8E1A0F71332296A00CFBC36 /* TTExpertise.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,8 +298,10 @@
 			files = (
 				A8E1A09F1332208600CFBC36 /* InfoPlist.strings in Resources */,
 				A8E1A0A81332208600CFBC36 /* MainWindow.xib in Resources */,
-				A8E1A0B11332208600CFBC36 /* FirstView.xib in Resources */,
-				A8E1A0B41332208600CFBC36 /* SecondView.xib in Resources */,
+				A8E1A0DA1332250000CFBC36 /* PracticeLogViewController.xib in Resources */,
+				A8E1A0E0133226E800CFBC36 /* ExpertiseViewController.xib in Resources */,
+				A8E1A0EC1332283300CFBC36 /* CalendarViewController.xib in Resources */,
+				A8E1A0F11332287200CFBC36 /* ChartViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,8 +339,12 @@
 			files = (
 				A8E1A0A21332208600CFBC36 /* main.m in Sources */,
 				A8E1A0A51332208600CFBC36 /* TenThousand_IPhoneAppDelegate.m in Sources */,
-				A8E1A0AB1332208600CFBC36 /* FirstViewController.m in Sources */,
-				A8E1A0AE1332208600CFBC36 /* SecondViewController.m in Sources */,
+				A8E1A0D91332250000CFBC36 /* PracticeLogViewController.m in Sources */,
+				A8E1A0DF133226E800CFBC36 /* ExpertiseViewController.m in Sources */,
+				A8E1A0EB1332283300CFBC36 /* CalendarViewController.m in Sources */,
+				A8E1A0F01332287200CFBC36 /* ChartViewController.m in Sources */,
+				A8E1A0F51332294400CFBC36 /* TTPracticeLog.m in Sources */,
+				A8E1A0F81332296A00CFBC36 /* TTExpertise.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,22 +381,6 @@
 				A8E1A0A71332208600CFBC36 /* en */,
 			);
 			name = MainWindow.xib;
-			sourceTree = "<group>";
-		};
-		A8E1A0AF1332208600CFBC36 /* FirstView.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A8E1A0B01332208600CFBC36 /* en */,
-			);
-			name = FirstView.xib;
-			sourceTree = "<group>";
-		};
-		A8E1A0B21332208600CFBC36 /* SecondView.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A8E1A0B31332208600CFBC36 /* en */,
-			);
-			name = SecondView.xib;
 			sourceTree = "<group>";
 		};
 		A8E1A0C31332208600CFBC36 /* InfoPlist.strings */ = {

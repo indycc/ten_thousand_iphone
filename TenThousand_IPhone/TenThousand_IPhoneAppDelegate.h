@@ -7,13 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TTExpertise.h"
+#import "TTPracticeLog.h"
 
 @interface TenThousand_IPhoneAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate> {
-
+    NSMutableArray *expertises;
+    NSMutableArray *practiceLog;
+    
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
 @property (nonatomic, retain) IBOutlet UITabBarController *tabBarController;
+
+-(id) expertises;
 
 @end
