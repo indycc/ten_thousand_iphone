@@ -23,4 +23,6 @@
 @property int practiceLogId;
 @property int expertiseId;
 
+-(id) initWithExpertise: (TTExpertise*) expertise andDate: (NSDate*) date andDuration:(NSTimeInterval) duration;
+
 @end

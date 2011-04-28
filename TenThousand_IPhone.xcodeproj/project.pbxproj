@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A81B5AE813604FA50032A0BD /* AddExpertiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A81B5AE613604FA50032A0BD /* AddExpertiseViewController.m */; };
+		A81B5AE913604FA50032A0BD /* AddExpertiseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A81B5AE713604FA50032A0BD /* AddExpertiseViewController.xib */; };
+		A84CD19913449BAD000B929A /* ExpertiseDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = A84CD19713449BAD000B929A /* ExpertiseDetail.m */; };
+		A84CD19A13449BAD000B929A /* ExpertiseDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = A84CD19813449BAD000B929A /* ExpertiseDetail.xib */; };
 		A8E1A0951332208600CFBC36 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8E1A0941332208600CFBC36 /* UIKit.framework */; };
 		A8E1A0971332208600CFBC36 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8E1A0961332208600CFBC36 /* Foundation.framework */; };
 		A8E1A0991332208600CFBC36 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8E1A0981332208600CFBC36 /* CoreGraphics.framework */; };
@@ -43,6 +47,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A81B5AE513604FA50032A0BD /* AddExpertiseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddExpertiseViewController.h; sourceTree = "<group>"; };
+		A81B5AE613604FA50032A0BD /* AddExpertiseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddExpertiseViewController.m; sourceTree = "<group>"; };
+		A81B5AE713604FA50032A0BD /* AddExpertiseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddExpertiseViewController.xib; sourceTree = "<group>"; };
+		A839E3361369BD1900206E02 /* ExpertiseAddDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpertiseAddDelegate.h; sourceTree = "<group>"; };
+		A84CD19613449BAD000B929A /* ExpertiseDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpertiseDetail.h; sourceTree = "<group>"; };
+		A84CD19713449BAD000B929A /* ExpertiseDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpertiseDetail.m; sourceTree = "<group>"; };
+		A84CD19813449BAD000B929A /* ExpertiseDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpertiseDetail.xib; sourceTree = "<group>"; };
 		A8E1A0901332208600CFBC36 /* TenThousand_IPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TenThousand_IPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8E1A0941332208600CFBC36 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A8E1A0961332208600CFBC36 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -194,6 +205,13 @@
 				A8E1A0DC133226E800CFBC36 /* ExpertiseViewController.h */,
 				A8E1A0DD133226E800CFBC36 /* ExpertiseViewController.m */,
 				A8E1A0DE133226E800CFBC36 /* ExpertiseViewController.xib */,
+				A84CD19613449BAD000B929A /* ExpertiseDetail.h */,
+				A84CD19713449BAD000B929A /* ExpertiseDetail.m */,
+				A84CD19813449BAD000B929A /* ExpertiseDetail.xib */,
+				A81B5AE513604FA50032A0BD /* AddExpertiseViewController.h */,
+				A81B5AE613604FA50032A0BD /* AddExpertiseViewController.m */,
+				A81B5AE713604FA50032A0BD /* AddExpertiseViewController.xib */,
+				A839E3361369BD1900206E02 /* ExpertiseAddDelegate.h */,
 			);
 			name = ExpertiseView;
 			sourceTree = "<group>";
@@ -302,6 +320,8 @@
 				A8E1A0E0133226E800CFBC36 /* ExpertiseViewController.xib in Resources */,
 				A8E1A0EC1332283300CFBC36 /* CalendarViewController.xib in Resources */,
 				A8E1A0F11332287200CFBC36 /* ChartViewController.xib in Resources */,
+				A84CD19A13449BAD000B929A /* ExpertiseDetail.xib in Resources */,
+				A81B5AE913604FA50032A0BD /* AddExpertiseViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +365,8 @@
 				A8E1A0F01332287200CFBC36 /* ChartViewController.m in Sources */,
 				A8E1A0F51332294400CFBC36 /* TTPracticeLog.m in Sources */,
 				A8E1A0F81332296A00CFBC36 /* TTExpertise.m in Sources */,
+				A84CD19913449BAD000B929A /* ExpertiseDetail.m in Sources */,
+				A81B5AE813604FA50032A0BD /* AddExpertiseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +539,7 @@
 				A8E1A0CF1332208600CFBC36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A8E1A0D01332208600CFBC36 /* Build configuration list for PBXNativeTarget "TenThousand_IPhoneTests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +548,7 @@
 				A8E1A0D21332208600CFBC36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

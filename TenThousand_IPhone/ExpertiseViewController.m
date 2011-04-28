@@ -7,9 +7,31 @@
 //
 
 #import "ExpertiseViewController.h"
+#import "ExpertiseDetail.h"
+#import "AddExpertiseViewController.h"
 
 
 @implementation ExpertiseViewController
+
+
+-(void)didAddExpertise:(TTExpertise *)expertise{
+    
+    TenThousand_IPhoneAppDelegate *delegate = (TenThousand_IPhoneAppDelegate*) [UIApplication sharedApplication].delegate;
+    if(expertise != nil){
+        [delegate.expertises addObject:expertise];
+        [[self tableView] reloadData];
+    }
+    [self.navigationController dismissModalViewControllerAnimated:YES];
+}
+-(void)addExpertiseViewController:(AddExpertiseViewController*)addViewController didAddExpertise:(TTExpertise*)expertise{
+    
+    TenThousand_IPhoneAppDelegate *delegate = (TenThousand_IPhoneAppDelegate*) [UIApplication sharedApplication].delegate;
+    if(expertise != nil){
+        [delegate.expertises addObject:expertise];
+        [[self tableView] reloadData];
+    }
+    [self.navigationController dismissModalViewControllerAnimated:YES];
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -33,11 +55,32 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+#pragma mark - some button things
+
+-(void)addExpertise:(id)sender{
+    // TODO: Needs to use an add specific view
+    
+    AddExpertiseViewController* addController = [[AddExpertiseViewController alloc] init];
+    [addController setExpertise:[[TTExpertise alloc] init]];
+    addController.delegate = self;
+    [self presentModalViewController:addController animated:YES];
+}
+-(UIBarButtonItem*) addButtonItem{
+    UIBarButtonItem* barItem =
+            [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                                           target:self
+                                                           action:@selector(addExpertise:)]
+                                autorelease];
+    return barItem;
+}
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"Expertise";
+    [[self navigationItem] setLeftBarButtonItem: [self editButtonItem]];
+    [self.navigationItem setRightBarButtonItem: [self addButtonItem]];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -56,6 +99,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self.tableView reloadData];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -121,26 +165,34 @@
 }
 */
 
-/*
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
+        TenThousand_IPhoneAppDelegate *delegate = (TenThousand_IPhoneAppDelegate*)[UIApplication sharedApplication].delegate;
+        [[delegate expertises] removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
 
-/*
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
 {
+    
+    TenThousand_IPhoneAppDelegate *delegate = (TenThousand_IPhoneAppDelegate*) [UIApplication sharedApplication].delegate;
+    int row = fromIndexPath.row;
+    TTExpertise *expertise = [[delegate expertises] objectAtIndex:row];
+    
+    [expertise retain];
+    [[delegate expertises] removeObjectAtIndex:fromIndexPath.row];
+    [[delegate expertises] insertObject:expertise atIndex:toIndexPath.row];
+    [expertise release];
 }
-*/
+
 
 /*
 // Override to support conditional rearranging of the table view.
@@ -155,6 +207,16 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    if(!detailViewController){
+        detailViewController = [[ExpertiseDetail alloc] init];
+    }
+    TenThousand_IPhoneAppDelegate *delegate = (TenThousand_IPhoneAppDelegate*) [UIApplication sharedApplication].delegate;
+    int row = indexPath.row;
+    
+    [detailViewController setExpertise:[[delegate expertises] objectAtIndex:row]];
+    [self.navigationController pushViewController:detailViewController animated:YES];
+    
     // Navigation logic may go here. Create and push another view controller.
     /*
      <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];

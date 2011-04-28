@@ -19,6 +19,9 @@
 -(id) expertises{
     return expertises;
 }
+-(id) practiceLogs{
+    return practiceLog;
+}
 
 #pragma mark --
 
@@ -31,10 +34,19 @@
                   [[TTExpertise alloc] initWithName: @"Katas" andId:3],
                   [[TTExpertise alloc] initWithName: @"Pro Dev Time" andId:4],
                   nil];
+    practiceLog = [[NSMutableArray alloc] initWithObjects:
+                   [[TTPracticeLog alloc] initWithExpertise: [expertises objectAtIndex:0]
+                                                    andDate: [[NSDate alloc] initWithTimeIntervalSince1970:1000000]
+                                                andDuration: 1000],
+                   [[TTPracticeLog alloc] initWithExpertise: [expertises objectAtIndex:0]
+                                                    andDate: [[NSDate alloc] initWithTimeIntervalSince1970:1000002]
+                                                andDuration: 1050],
+                   nil];
     
     // Override point for customization after application launch.
     // Add the tab bar controller's current view as a subview of the window
     self.window.rootViewController = self.tabBarController;
+
     [self.window makeKeyAndVisible];
     return YES;
 }

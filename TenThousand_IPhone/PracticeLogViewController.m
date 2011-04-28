@@ -8,7 +8,6 @@
 
 #import "PracticeLogViewController.h"
 
-
 @implementation PracticeLogViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -33,12 +32,34 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+#pragma mark - Some add button things
+
+-(void)addExpertise:(id)sender{
+// Thinks it's expertise detail    
+//    if(!detailViewController){
+//        detailViewController = [[ExpertiseDetail alloc] init];
+//    }
+//    
+//    [detailViewController setExpertise: [[TTExpertise alloc] init]];
+//    [self presentModalViewController:detailViewController animated:YES];
+}
+-(UIBarButtonItem*) addButtonItem{
+    UIBarButtonItem* barItem =
+        [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                                       target:self
+                                                       action:@selector(addPracticeLog:)]
+         autorelease];
+    [barItem setEnabled:NO];
+    return barItem;
+}
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    self.title = @"Practice Log";
+    [[self navigationItem] setLeftBarButtonItem:[self editButtonItem]];
+    [[self navigationItem] setRightBarButtonItem:[self addButtonItem]];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -83,16 +104,15 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    TenThousand_IPhoneAppDelegate *delegate = (TenThousand_IPhoneAppDelegate*) [UIApplication sharedApplication].delegate;
+    return [[delegate practiceLogs] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -105,7 +125,10 @@
     }
     
     // Configure the cell...
-    
+    TenThousand_IPhoneAppDelegate *delegate = (TenThousand_IPhoneAppDelegate*) [UIApplication sharedApplication].delegate;
+    int row = indexPath.row;
+    TTPracticeLog* log = [[delegate practiceLogs] objectAtIndex:row];
+    cell.textLabel.text = [log.date description];
     return cell;
 }
 

@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "TenThousand_IPhoneAppDelegate.h"
+#import "ExpertiseAddDelegate.h"
+@class ExpertiseDetail;
 
-@interface ExpertiseViewController : UITableViewController {
-    
+@interface ExpertiseViewController : UITableViewController <ExpertiseAddDelegate> {
+    ExpertiseDetail *detailViewController;
 }
 
 @end

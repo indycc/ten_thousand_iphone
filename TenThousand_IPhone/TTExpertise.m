@@ -18,4 +18,9 @@
     return self;
 }
 
+-(void)dealloc{
+    [expertiseName release];
+    [super dealloc];
+}
+
 @end
