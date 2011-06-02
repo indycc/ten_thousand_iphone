@@ -13,16 +13,16 @@
     int practiceLogId;
     int expertiseId;
     TTExpertise *expertise;
-    NSTimeInterval time;
+    NSInteger duration;
     NSDate *date;
 }
 
 @property (retain) TTExpertise *expertise;
 @property (retain) NSDate *date;
-@property NSTimeInterval time;
+@property NSInteger duration;
 @property int practiceLogId;
 @property int expertiseId;
 
--(id) initWithExpertise: (TTExpertise*) expertise andDate: (NSDate*) date andDuration:(NSTimeInterval) duration;
+-(id) initWithExpertise: (TTExpertise*) expertise andDate: (NSDate*) date andDuration:(NSInteger) duration;
 
 @end

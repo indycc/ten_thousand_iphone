@@ -10,13 +10,13 @@
 
 
 @implementation TTPracticeLog
-@synthesize expertise, expertiseId, time, practiceLogId, date;
--(id) initWithExpertise: (TTExpertise*) theExpertise andDate: (NSDate*) theDate andDuration:(NSTimeInterval) duration 
+@synthesize expertise, expertiseId, duration, practiceLogId, date;
+-(id) initWithExpertise: (TTExpertise*) theExpertise andDate: (NSDate*) theDate andDuration:(NSInteger) minutes 
 {
     self.expertise = theExpertise;
     self.date = theDate;
     self.expertiseId = theExpertise.expertiseId;
-    self.time = duration;
+    self.duration = minutes;
     return self;
 }
 -(void)dealloc{

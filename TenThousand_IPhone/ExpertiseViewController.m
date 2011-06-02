@@ -57,9 +57,7 @@
 
 #pragma mark - some button things
 
--(void)addExpertise:(id)sender{
-    // TODO: Needs to use an add specific view
-    
+-(void)addExpertise:(id)sender{    
     AddExpertiseViewController* addController = [[AddExpertiseViewController alloc] init];
     [addController setExpertise:[[TTExpertise alloc] init]];
     addController.delegate = self;

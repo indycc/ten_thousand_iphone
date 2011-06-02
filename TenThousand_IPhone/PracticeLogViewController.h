@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "TenThousand_IPhoneAppDelegate.h"
+#import "AddPracticeLogViewController.h"
+#import "PracticeLogAddDelegate.h"
 
-@interface PracticeLogViewController : UITableViewController {
+@interface PracticeLogViewController : UITableViewController <PracticeLogAddDelegate> {
     
 }
 

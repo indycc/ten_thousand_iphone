@@ -33,15 +33,26 @@
 }
 
 #pragma mark - Some add button things
+-(void)didAddPracticeLog:(TTPracticeLog *)practiceLog{
+    
+    
+    TenThousand_IPhoneAppDelegate *delegate = (TenThousand_IPhoneAppDelegate*) [UIApplication sharedApplication].delegate;
+    if(practiceLog != nil){
+        [delegate.practiceLogs addObject:practiceLog];
+        [[self tableView] reloadData];
+    }
+    [self.navigationController dismissModalViewControllerAnimated:YES];
+}
 
--(void)addExpertise:(id)sender{
-// Thinks it's expertise detail    
-//    if(!detailViewController){
-//        detailViewController = [[ExpertiseDetail alloc] init];
-//    }
-//    
-//    [detailViewController setExpertise: [[TTExpertise alloc] init]];
-//    [self presentModalViewController:detailViewController animated:YES];
+-(void)addPracticeLog:(id)sender{
+    TenThousand_IPhoneAppDelegate *delegate = (TenThousand_IPhoneAppDelegate*) [UIApplication sharedApplication].delegate;
+    
+    AddPracticeLogViewController* addController = [[AddPracticeLogViewController alloc] init];
+    [addController setPracticeLog:[[TTPracticeLog alloc] init]];
+    addController.practiceLog.date = [[NSDate alloc] init];
+    addController.practiceLog.expertise = [[delegate expertises] objectAtIndex:0];
+    addController.delegate = self;
+    [self presentModalViewController:addController animated:YES];
 }
 -(UIBarButtonItem*) addButtonItem{
     UIBarButtonItem* barItem =
@@ -49,7 +60,6 @@
                                                        target:self
                                                        action:@selector(addPracticeLog:)]
          autorelease];
-    [barItem setEnabled:NO];
     return barItem;
 }
 #pragma mark - View lifecycle
