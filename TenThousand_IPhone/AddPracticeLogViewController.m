@@ -107,11 +107,15 @@
 
 #pragma mark - Ui management
 -(void) updateUi{
+    [datePicker setDate: practiceLog.date];
+    
     NSString* dateString = [NSDateFormatter localizedStringFromDate:practiceLog.date dateStyle:NSDateFormatterLongStyle timeStyle:NSDateFormatterShortStyle];
     NSString* expertiseName = practiceLog.expertise.expertiseName;
     
     [dateButton setTitle:dateString forState:UIControlStateNormal];
+    
     [expertiseButton setTitle:expertiseName forState:UIControlStateNormal];
+    
     NSString* minutesText = [[NSString alloc] initWithFormat:@"%i", practiceLog.duration];
     [minutesPracticedTextField setText:minutesText];
     
@@ -122,6 +126,9 @@
 {
     [super viewDidLoad];
     [self updateUi];
+    [minutesPracticedTextField becomeFirstResponder];
+    
+    [minutesPracticedTextField selectAll:self];
     // Do any additional setup after loading the view from its nib.
 }
 
