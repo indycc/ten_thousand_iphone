@@ -11,6 +11,7 @@
 		A81B5AE913604FA50032A0BD /* AddExpertiseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A81B5AE713604FA50032A0BD /* AddExpertiseViewController.xib */; };
 		A84CD19913449BAD000B929A /* ExpertiseDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = A84CD19713449BAD000B929A /* ExpertiseDetail.m */; };
 		A84CD19A13449BAD000B929A /* ExpertiseDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = A84CD19813449BAD000B929A /* ExpertiseDetail.xib */; };
+		A852893C139BB1B200631380 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = A852893B139BB1B100631380 /* Readme.md */; };
 		A8B9F8861372BED10014E5DC /* AddPracticeLogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B9F8841372BED10014E5DC /* AddPracticeLogViewController.m */; };
 		A8B9F8871372BED10014E5DC /* AddPracticeLogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8B9F8851372BED10014E5DC /* AddPracticeLogViewController.xib */; };
 		A8E1A0951332208600CFBC36 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8E1A0941332208600CFBC36 /* UIKit.framework */; };
@@ -56,6 +57,7 @@
 		A84CD19613449BAD000B929A /* ExpertiseDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpertiseDetail.h; sourceTree = "<group>"; };
 		A84CD19713449BAD000B929A /* ExpertiseDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpertiseDetail.m; sourceTree = "<group>"; };
 		A84CD19813449BAD000B929A /* ExpertiseDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpertiseDetail.xib; sourceTree = "<group>"; };
+		A852893B139BB1B100631380 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.md; sourceTree = "<group>"; };
 		A8B9F8831372BED10014E5DC /* AddPracticeLogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPracticeLogViewController.h; sourceTree = "<group>"; };
 		A8B9F8841372BED10014E5DC /* AddPracticeLogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPracticeLogViewController.m; sourceTree = "<group>"; };
 		A8B9F8851372BED10014E5DC /* AddPracticeLogViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddPracticeLogViewController.xib; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 		A8E1A0851332208500CFBC36 = {
 			isa = PBXGroup;
 			children = (
+				A852893B139BB1B100631380 /* Readme.md */,
 				A8E1A09A1332208600CFBC36 /* TenThousand_IPhone */,
 				A8E1A0C01332208600CFBC36 /* TenThousand_IPhoneTests */,
 				A8E1A0931332208600CFBC36 /* Frameworks */,
@@ -333,6 +336,7 @@
 				A84CD19A13449BAD000B929A /* ExpertiseDetail.xib in Resources */,
 				A81B5AE913604FA50032A0BD /* AddExpertiseViewController.xib in Resources */,
 				A8B9F8871372BED10014E5DC /* AddPracticeLogViewController.xib in Resources */,
+				A852893C139BB1B200631380 /* Readme.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
