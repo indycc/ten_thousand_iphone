@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "TenThousand_IPhoneAppDelegate.h"
 #import "ExpertiseAddDelegate.h"
+#import "TTRepository.h"
 @class ExpertiseDetail;
 
 @interface ExpertiseViewController : UITableViewController <ExpertiseAddDelegate> {

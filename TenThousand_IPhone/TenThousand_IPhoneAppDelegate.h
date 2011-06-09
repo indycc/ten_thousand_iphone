@@ -20,7 +20,4 @@
 
 @property (nonatomic, retain) IBOutlet UITabBarController *tabBarController;
 
--(id) expertises;
--(id) practiceLogs;
-
 @end

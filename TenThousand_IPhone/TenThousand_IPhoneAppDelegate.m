@@ -5,7 +5,7 @@
 //  Created by Brian Ball on 3/17/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
-
+#import "TTRepository.h"
 #import "TenThousand_IPhoneAppDelegate.h"
 
 @implementation TenThousand_IPhoneAppDelegate
@@ -15,34 +15,11 @@
 
 @synthesize tabBarController=_tabBarController;
 
-#pragma mark Repository
--(id) expertises{
-    return expertises;
-}
--(id) practiceLogs{
-    return practiceLog;
-}
-
 #pragma mark --
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    
-    expertises = [[NSMutableArray alloc]initWithObjects:
-                  [[TTExpertise alloc] initWithName: @"Tuba" andId:1],
-                  [[TTExpertise alloc] initWithName: @"Drawing" andId:2],
-                  [[TTExpertise alloc] initWithName: @"Katas" andId:3],
-                  [[TTExpertise alloc] initWithName: @"Pro Dev Time" andId:4],
-                  nil];
-    practiceLog = [[NSMutableArray alloc] initWithObjects:
-                   [[TTPracticeLog alloc] initWithExpertise: [expertises objectAtIndex:0]
-                                                    andDate: [[NSDate alloc] initWithTimeIntervalSince1970:1000000]
-                                                andDuration: 1000],
-                   [[TTPracticeLog alloc] initWithExpertise: [expertises objectAtIndex:0]
-                                                    andDate: [[NSDate alloc] initWithTimeIntervalSince1970:1000002]
-                                                andDuration: 1050],
-                   nil];
-    
+{    
+    [TTRepository initializeData];
     // Override point for customization after application launch.
     // Add the tab bar controller's current view as a subview of the window
     self.window.rootViewController = self.tabBarController;

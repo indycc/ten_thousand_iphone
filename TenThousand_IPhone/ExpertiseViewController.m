@@ -16,18 +16,16 @@
 
 -(void)didAddExpertise:(TTExpertise *)expertise{
     
-    TenThousand_IPhoneAppDelegate *delegate = (TenThousand_IPhoneAppDelegate*) [UIApplication sharedApplication].delegate;
     if(expertise != nil){
-        [delegate.expertises addObject:expertise];
+        [TTRepository addExpertise:expertise];
         [[self tableView] reloadData];
     }
     [self.navigationController dismissModalViewControllerAnimated:YES];
 }
 -(void)addExpertiseViewController:(AddExpertiseViewController*)addViewController didAddExpertise:(TTExpertise*)expertise{
     
-    TenThousand_IPhoneAppDelegate *delegate = (TenThousand_IPhoneAppDelegate*) [UIApplication sharedApplication].delegate;
     if(expertise != nil){
-        [delegate.expertises addObject:expertise];
+        [TTRepository addExpertise:expertise];
         [[self tableView] reloadData];
     }
     [self.navigationController dismissModalViewControllerAnimated:YES];
@@ -132,8 +130,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    TenThousand_IPhoneAppDelegate *delegate = (TenThousand_IPhoneAppDelegate*) [UIApplication sharedApplication].delegate;
-    return [[delegate expertises] count];
+    return [[TTRepository expertises] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -146,9 +143,8 @@
     }
     
     // Configure the cell...
-    TenThousand_IPhoneAppDelegate *delegate = (TenThousand_IPhoneAppDelegate*) [UIApplication sharedApplication].delegate;
     int row = indexPath.row;
-    TTExpertise *expertise = [[delegate expertises] objectAtIndex:row];
+    TTExpertise *expertise = [[TTRepository expertises] objectAtIndex:row];
     cell.textLabel.text = expertise.expertiseName;
     
     return cell;
@@ -168,8 +164,7 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
-        TenThousand_IPhoneAppDelegate *delegate = (TenThousand_IPhoneAppDelegate*)[UIApplication sharedApplication].delegate;
-        [[delegate expertises] removeObjectAtIndex:indexPath.row];
+        [[TTRepository expertises] removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
@@ -179,16 +174,9 @@
 
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-    
-    TenThousand_IPhoneAppDelegate *delegate = (TenThousand_IPhoneAppDelegate*) [UIApplication sharedApplication].delegate;
-    int row = fromIndexPath.row;
-    TTExpertise *expertise = [[delegate expertises] objectAtIndex:row];
-    
-    [expertise retain];
-    [[delegate expertises] removeObjectAtIndex:fromIndexPath.row];
-    [[delegate expertises] insertObject:expertise atIndex:toIndexPath.row];
-    [expertise release];
+{    
+    [TTRepository moveExpertiseFrom:fromIndexPath.row to:toIndexPath.row];
+
 }
 
 
@@ -209,10 +197,9 @@
     if(!detailViewController){
         detailViewController = [[ExpertiseDetail alloc] init];
     }
-    TenThousand_IPhoneAppDelegate *delegate = (TenThousand_IPhoneAppDelegate*) [UIApplication sharedApplication].delegate;
     int row = indexPath.row;
     
-    [detailViewController setExpertise:[[delegate expertises] objectAtIndex:row]];
+    [detailViewController setExpertise:[[TTRepository expertises] objectAtIndex:row]];
     [self.navigationController pushViewController:detailViewController animated:YES];
     
     // Navigation logic may go here. Create and push another view controller.

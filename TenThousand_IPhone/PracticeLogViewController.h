@@ -10,6 +10,7 @@
 #import "TenThousand_IPhoneAppDelegate.h"
 #import "AddPracticeLogViewController.h"
 #import "PracticeLogAddDelegate.h"
+#import "TTRepository.h"
 
 @interface PracticeLogViewController : UITableViewController <PracticeLogAddDelegate> {
     

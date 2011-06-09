@@ -52,9 +52,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        TenThousand_IPhoneAppDelegate *del = (TenThousand_IPhoneAppDelegate*)[UIApplication sharedApplication].delegate;
         NSDate* date = [[NSDate alloc] init];
-        TTExpertise* expertise = [[del expertises] objectAtIndex:0];
+        TTExpertise* expertise = [[TTRepository expertises] objectAtIndex:0];
         practiceLog = [[TTPracticeLog alloc] initWithExpertise: expertise andDate: date andDuration: 10];
         // Custom initialization
     }
@@ -85,24 +84,20 @@
 }
 
 -(void)pickerView:(UIPickerView*)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-    TenThousand_IPhoneAppDelegate *del = (TenThousand_IPhoneAppDelegate*) [UIApplication sharedApplication].delegate;
     
-    TTExpertise* expertise = [[del expertises] objectAtIndex:row];
+    TTExpertise* expertise = [[TTRepository expertises] objectAtIndex:row];
     [practiceLog setExpertise:expertise];
     [self updateUi];
 }
 
 -(NSInteger)pickerView:(UIPickerView*)pickerView numberOfRowsInComponent:(NSInteger)component{
     
-    TenThousand_IPhoneAppDelegate *del = (TenThousand_IPhoneAppDelegate*) [UIApplication sharedApplication].delegate;
-    return [[del expertises] count];
+    return [[TTRepository expertises] count];
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    
-    TenThousand_IPhoneAppDelegate *del = (TenThousand_IPhoneAppDelegate*) [UIApplication sharedApplication].delegate;
-    return  [[[del expertises] objectAtIndex:row] expertiseName];
+    return  [[[TTRepository expertises] objectAtIndex:row] expertiseName];
 }
 
 #pragma mark - Ui management

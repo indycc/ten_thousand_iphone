@@ -36,21 +36,19 @@
 -(void)didAddPracticeLog:(TTPracticeLog *)practiceLog{
     
     
-    TenThousand_IPhoneAppDelegate *delegate = (TenThousand_IPhoneAppDelegate*) [UIApplication sharedApplication].delegate;
     if(practiceLog != nil){
-        [delegate.practiceLogs addObject:practiceLog];
+        [TTRepository addPracticeLog:practiceLog];
         [[self tableView] reloadData];
     }
     [self.navigationController dismissModalViewControllerAnimated:YES];
 }
 
 -(void)addPracticeLog:(id)sender{
-    TenThousand_IPhoneAppDelegate *delegate = (TenThousand_IPhoneAppDelegate*) [UIApplication sharedApplication].delegate;
     
     AddPracticeLogViewController* addController = [[AddPracticeLogViewController alloc] init];
     [addController setPracticeLog:[[TTPracticeLog alloc] init]];
     addController.practiceLog.date = [[NSDate alloc] init];
-    addController.practiceLog.expertise = [[delegate expertises] objectAtIndex:0];
+    addController.practiceLog.expertise = [[TTRepository expertises] objectAtIndex:0];
     addController.delegate = self;
     [self presentModalViewController:addController animated:YES];
 }
@@ -121,8 +119,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    TenThousand_IPhoneAppDelegate *delegate = (TenThousand_IPhoneAppDelegate*) [UIApplication sharedApplication].delegate;
-    return [[delegate practiceLogs] count];
+    return [[TTRepository practiceLogs] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -135,9 +132,8 @@
     }
     
     // Configure the cell...
-    TenThousand_IPhoneAppDelegate *delegate = (TenThousand_IPhoneAppDelegate*) [UIApplication sharedApplication].delegate;
     int row = indexPath.row;
-    TTPracticeLog* log = [[delegate practiceLogs] objectAtIndex:row];
+    TTPracticeLog* log = [[TTRepository practiceLogs] objectAtIndex:row];
     cell.textLabel.text = [log.date description];
     return cell;
 }
@@ -155,9 +151,9 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source        
-        TenThousand_IPhoneAppDelegate *del = (TenThousand_IPhoneAppDelegate*)[UIApplication sharedApplication].delegate;
-        [[del practiceLogs] removeObjectAtIndex:indexPath.row];
+        // Delete the row from the data source
+        [TTRepository removePracticeLogAtIndex:indexPath.row];
+
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation: UITableViewRowAnimationFade];
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {

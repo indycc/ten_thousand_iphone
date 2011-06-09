@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "PracticeLogAddDelegate.h"
+#import "TTRepository.h"
 
 
 @interface AddPracticeLogViewController : UIViewController {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A802D19313A0E64C00F872F6 /* TTRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = A802D19213A0E64C00F872F6 /* TTRepository.m */; };
 		A81B5AE813604FA50032A0BD /* AddExpertiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A81B5AE613604FA50032A0BD /* AddExpertiseViewController.m */; };
 		A81B5AE913604FA50032A0BD /* AddExpertiseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A81B5AE713604FA50032A0BD /* AddExpertiseViewController.xib */; };
 		A84CD19913449BAD000B929A /* ExpertiseDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = A84CD19713449BAD000B929A /* ExpertiseDetail.m */; };
@@ -50,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A802D19113A0E64C00F872F6 /* TTRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRepository.h; sourceTree = "<group>"; };
+		A802D19213A0E64C00F872F6 /* TTRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRepository.m; sourceTree = "<group>"; };
 		A81B5AE513604FA50032A0BD /* AddExpertiseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddExpertiseViewController.h; sourceTree = "<group>"; };
 		A81B5AE613604FA50032A0BD /* AddExpertiseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddExpertiseViewController.m; sourceTree = "<group>"; };
 		A81B5AE713604FA50032A0BD /* AddExpertiseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddExpertiseViewController.xib; sourceTree = "<group>"; };
@@ -163,6 +166,8 @@
 				A8E1A0A41332208600CFBC36 /* TenThousand_IPhoneAppDelegate.m */,
 				A8E1A0A61332208600CFBC36 /* MainWindow.xib */,
 				A8E1A09B1332208600CFBC36 /* Supporting Files */,
+				A802D19113A0E64C00F872F6 /* TTRepository.h */,
+				A802D19213A0E64C00F872F6 /* TTRepository.m */,
 			);
 			path = TenThousand_IPhone;
 			sourceTree = "<group>";
@@ -383,6 +388,7 @@
 				A84CD19913449BAD000B929A /* ExpertiseDetail.m in Sources */,
 				A81B5AE813604FA50032A0BD /* AddExpertiseViewController.m in Sources */,
 				A8B9F8861372BED10014E5DC /* AddPracticeLogViewController.m in Sources */,
+				A802D19313A0E64C00F872F6 /* TTRepository.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

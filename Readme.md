@@ -16,7 +16,7 @@ What are the phone app's next steps?
 * Integration with the running rails application
   * use site as repository
   * handle off-line situations
-* simplify repository for use of site for data
+* + simplify repository for use of site data
 * Add calendar colors to expertises
 * Format practice log entries (Tuba: 10 minutes at 1/4/11 6:45 pm)
 * Better experience on Logging Page
